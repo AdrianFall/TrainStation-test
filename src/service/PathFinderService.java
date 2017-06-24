@@ -1,6 +1,7 @@
 package service;
 
 import dto.QuickestPathDTO;
+import exception.PathFinderServiceException;
 import model.TrainStation;
 
 /**
@@ -8,6 +9,6 @@ import model.TrainStation;
  */
 public interface PathFinderService {
 
-    QuickestPathDTO getQuickestPath(TrainStation origin, TrainStation target);
+    QuickestPathDTO getQuickestPath(TrainStation origin, TrainStation target) throws PathFinderServiceException;
 
 }
