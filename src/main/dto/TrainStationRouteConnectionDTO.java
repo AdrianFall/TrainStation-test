@@ -1,6 +1,6 @@
-package dto;
+package main.dto;
 
-import model.TrainStation;
+import main.model.TrainStation;
 
 /**
  * Created by Adrian on 24/06/2017.

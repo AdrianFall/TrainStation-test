@@ -1,4 +1,4 @@
-package model;
+package main.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +20,10 @@ public class TrainStation {
         this.routes = routes;
     }
 
+    public TrainStation(String name) {
+        this.name = name;
+    }
+
     // Getters & Setters
     public String getName() {
         return name;
@@ -35,5 +39,23 @@ public class TrainStation {
 
     public void setRoutes(List<Route> routes) {
         this.routes = routes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TrainStation that = (TrainStation) o;
+
+        if (!name.equals(that.name)) return false;
+        return routes != null ? routes.equals(that.routes) : that.routes == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + (routes != null ? routes.hashCode() : 0);
+        return result;
     }
 }

@@ -1,9 +1,9 @@
-package service.impl;
+package main.service.impl;
 
-import dto.QuickestPathDTO;
-import exception.PathFinderServiceException;
-import model.TrainStation;
-import service.PathFinderService;
+import main.dto.QuickestPathDTO;
+import main.exception.PathFinderServiceException;
+import main.model.TrainStation;
+import main.service.PathFinderService;
 
 /**
  * Created by Adrian on 24/06/2017.

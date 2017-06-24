@@ -1,13 +1,14 @@
-package dto;
+package main.dto;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by Adrian on 24/06/2017.
  */
 public class QuickestPathDTO {
+
+    // Includes origin, target and duration between each connection
     private List<TrainStationRouteConnectionDTO> routeConnections = new ArrayList<>();
     private int totalDuration;
 
