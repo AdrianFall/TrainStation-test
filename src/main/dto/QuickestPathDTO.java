@@ -8,12 +8,13 @@ import java.util.List;
  */
 public class QuickestPathDTO {
 
-    // Includes origin, target and duration between each connection
+    // Connections from origin until target
     private List<TrainStationRouteConnectionDTO> routeConnections = new ArrayList<>();
     private int totalDuration;
 
     // Constructors
     public QuickestPathDTO() {
+        totalDuration = 0;
     }
 
     public QuickestPathDTO(List<TrainStationRouteConnectionDTO> routeConnections, int totalDuration) {

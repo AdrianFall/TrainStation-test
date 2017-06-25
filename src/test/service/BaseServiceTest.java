@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by Adrian on 24/06/2017.
  */
-public class BaseTest {
+public class BaseServiceTest {
 
     TrainStation A = new TrainStation("A");
     TrainStation B = new TrainStation("B");
@@ -30,15 +30,15 @@ public class BaseTest {
         pathFinderService = new PathFinderServiceImpl();
         // Add direct connections (routes)
         A.setRoutes(Arrays.asList(new Route(B, 3),
-                new Route(D, 6)));
+                                  new Route(D, 6)));
         B.setRoutes(Arrays.asList(new Route(A, 3),
-                new Route(C, 7)));
+                                  new Route(C, 7)));
         D.setRoutes(Arrays.asList(new Route(B, 5),
-                new Route(E, 9),
-                new Route(C, 9)));
+                                  new Route(E, 9),
+                                  new Route(C, 9)));
         E.setRoutes(Arrays.asList(new Route(D, 9)));
         C.setRoutes(Arrays.asList(new Route(E, 3),
-                new Route(D, 9)));
+                                  new Route(D, 9)));
 
     }
 

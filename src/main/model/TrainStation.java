@@ -6,9 +6,10 @@ import java.util.List;
 /**
  * Created by Adrian on 24/06/2017.
  */
-public class TrainStation {
+public class TrainStation extends TrainStationVertex {
 
     private String name;
+    // Direct connections
     private List<Route> routes = new ArrayList<>();
 
     // Constructors
@@ -57,5 +58,10 @@ public class TrainStation {
         int result = name.hashCode();
         result = 31 * result + (routes != null ? routes.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return getVertexDistance().toString();
     }
 }
